@@ -1,2 +1,16 @@
 dataset_features/
 backups/
+*.txt
+make_experiment/__pycache__
+vibecoding_2
+*.png
+non_functional/class_function_name_check.csv
+non_functional/class_level_metrics.csv
+
+main_exp_sheet_2.csv
+.DS_Store
+SideProject_submissions_links_.checkpoint.ndjson_review.json
+Vibecoding_submissions_links_.checkpoint.ndjson_review.json
+non_functional/__pycache__
+non_functional/old_notebooks
+non_functional/viz_notebooks/__pycache__
