@@ -1,0 +1,259 @@
+,url,commit,proj_name,file_path,file_name,fn_name,fn_sig,n_args,line_count,fn_called,var_list,fn_code
+https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/main.py,main.py,root,async def root():,2,10,"['range(start_port, start_port + max_attempts)', ""RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"", 'socket.socket(socket.AF_INET, socket.SOCK_STREAM)', ""s.bind(('', port))""]",[],"def find_available_port(start_port: int=8000, max_attempts: int=10) -> int:
+    """"""Find an available port starting from start_port""""""
+    for port in range(start_port, start_port + max_attempts):
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.bind(('', port))
+                return port
+        except OSError:
+            continue
+    raise RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"
+https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/main.py,main.py,root,async def root():,2,10,"['range(start_port, start_port + max_attempts)', ""RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"", 'socket.socket(socket.AF_INET, socket.SOCK_STREAM)', ""s.bind(('', port))""]",[],"def find_available_port(start_port: int=8000, max_attempts: int=10) -> int:
+    """"""Find an available port starting from start_port""""""
+    for port in range(start_port, start_port + max_attempts):
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.bind(('', port))
+                return port
+        except OSError:
+            continue
+    raise RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"
+https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/main.py,main.py,root,async def root():,2,10,"['range(start_port, start_port + max_attempts)', ""RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"", 'socket.socket(socket.AF_INET, socket.SOCK_STREAM)', ""s.bind(('', port))""]",[],"def find_available_port(start_port: int=8000, max_attempts: int=10) -> int:
+    """"""Find an available port starting from start_port""""""
+    for port in range(start_port, start_port + max_attempts):
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.bind(('', port))
+                return port
+        except OSError:
+            continue
+    raise RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"
+https://github.com/jbdamask/scratch/,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/worklog_proscessor.py,worklog_proscessor.py,clean_activities,def clean_activities(text: str) -> str:,1,11,"[""re.sub('\\\\(https?://[^)]*\\\\)', '', text)"", ""re.sub(',\\\\s*,', ',', text)"", ""re.sub(',\\\\s*$', '', text)"", ""re.sub('^\\\\s*,', '', text)"", ""re.sub('\\\\s+', ' ', text)"", ""re.sub('\\\\s*,\\\\s*', ', ', text)"", 'text.strip()']",['text'],"def clean_activities(text: str) -> str:
+    """"""Clean activities text by removing URLs and normalizing whitespace.""""""
+    if not text:
+        return ''
+    text = re.sub('\\(https?://[^)]*\\)', '', text)
+    text = re.sub(',\\s*,', ',', text)
+    text = re.sub(',\\s*$', '', text)
+    text = re.sub('^\\s*,', '', text)
+    text = re.sub('\\s+', ' ', text)
+    text = re.sub('\\s*,\\s*', ', ', text)
+    return text.strip()"
+https://github.com/jbdamask/scratch/,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/worklog_proscessor.py,worklog_proscessor.py,process_worklog_csv,"def process_worklog_csv(file_content: str) -> List[Dict[str, Any]]:",1,25,"['StringIO(file_content)', 'csv.reader(csvfile)', 'next(reader)', ""ValueError(f'Error processing CSV: {e}')"", 'len(row)', 'row[0].strip().strip(\'""\')', 'row[1].strip().strip(\'""\')', 'row[2].strip()', 'clean_activities(row[5]).strip(\'""\')', ""results.append({'name': name, 'date': date, 'hours': hours, 'activities': activities})"", 'row[0].strip()', 'row[1].strip()', 'clean_activities(row[5])']","['results', 'csvfile', 'reader', 'name', 'date', 'hours', 'activities']","def process_worklog_csv(file_content: str) -> List[Dict[str, Any]]:
+    """"""
+    Process worklog CSV content and return cleaned data.
+    
+    Args:
+        file_content: String content of the CSV file
+        
+    Returns:
+        List of dictionaries with keys: name, date, hours, activities
+    """"""
+    results = []
+    try:
+        csvfile = StringIO(file_content)
+        reader = csv.reader(csvfile)
+        next(reader)
+        for row in reader:
+            if len(row) >= 6:
+                name = row[0].strip().strip('""')
+                date = row[1].strip().strip('""')
+                hours = row[2].strip()
+                activities = clean_activities(row[5]).strip('""')
+                results.append({'name': name, 'date': date, 'hours': hours, 'activities': activities})
+    except Exception as e:
+        raise ValueError(f'Error processing CSV: {e}')
+    return results"
+https://github.com/jbdamask/scratch/,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/worklog_proscessor.py,worklog_proscessor.py,process_worklog_csv_to_csv_string,def process_worklog_csv_to_csv_string(file_content: str) -> str:,1,17,"['process_worklog_csv(file_content)', 'StringIO()', 'csv.writer(output, quoting=csv.QUOTE_MINIMAL)', ""writer.writerow(['Name', 'Date', 'Billable Hours', 'Activities'])"", 'output.getvalue()', ""writer.writerow([row['name'], row['date'], row['hours'], row['activities']])""]","['results', 'output', 'writer']","def process_worklog_csv_to_csv_string(file_content: str) -> str:
+    """"""
+    Process worklog CSV content and return as cleaned CSV string.
+    
+    Args:
+        file_content: String content of the CSV file
+        
+    Returns:
+        Cleaned CSV string with header
+    """"""
+    results = process_worklog_csv(file_content)
+    output = StringIO()
+    writer = csv.writer(output, quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(['Name', 'Date', 'Billable Hours', 'Activities'])
+    for row in results:
+        writer.writerow([row['name'], row['date'], row['hours'], row['activities']])
+    return output.getvalue()"
+https://github.com/jbdamask/scratch/,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/worklog_proscessor.py,worklog_proscessor.py,process_worklog_file,"def process_worklog_file(input_file_path: str) -> List[Dict[str, Any]]:",1,16,"[""open(input_file_path, 'r', encoding='utf-8')"", 'csvfile.read()', 'process_worklog_csv(content)', ""ValueError(f'Error reading file {input_file_path}: {e}')""]",['content'],"def process_worklog_file(input_file_path: str) -> List[Dict[str, Any]]:
+    """"""
+    Process worklog CSV file and return cleaned data.
+    
+    Args:
+        input_file_path: Path to the CSV file
+        
+    Returns:
+        List of dictionaries with keys: name, date, hours, activities
+    """"""
+    try:
+        with open(input_file_path, 'r', encoding='utf-8') as csvfile:
+            content = csvfile.read()
+            return process_worklog_csv(content)
+    except Exception as e:
+        raise ValueError(f'Error reading file {input_file_path}: {e}')"
+https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/main.py,main.py,root,async def root():,2,10,"['range(start_port, start_port + max_attempts)', ""RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"", 'socket.socket(socket.AF_INET, socket.SOCK_STREAM)', ""s.bind(('', port))""]",[],"def find_available_port(start_port: int=8000, max_attempts: int=10) -> int:
+    """"""Find an available port starting from start_port""""""
+    for port in range(start_port, start_port + max_attempts):
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.bind(('', port))
+                return port
+        except OSError:
+            continue
+    raise RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"
+https://github.com/jbdamask/scratch/,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/worklog_proscessor.py,worklog_proscessor.py,clean_activities,def clean_activities(text: str) -> str:,1,11,"[""re.sub('\\\\(https?://[^)]*\\\\)', '', text)"", ""re.sub(',\\\\s*,', ',', text)"", ""re.sub(',\\\\s*$', '', text)"", ""re.sub('^\\\\s*,', '', text)"", ""re.sub('\\\\s+', ' ', text)"", ""re.sub('\\\\s*,\\\\s*', ', ', text)"", 'text.strip()']",['text'],"def clean_activities(text: str) -> str:
+    """"""Clean activities text by removing URLs and normalizing whitespace.""""""
+    if not text:
+        return ''
+    text = re.sub('\\(https?://[^)]*\\)', '', text)
+    text = re.sub(',\\s*,', ',', text)
+    text = re.sub(',\\s*$', '', text)
+    text = re.sub('^\\s*,', '', text)
+    text = re.sub('\\s+', ' ', text)
+    text = re.sub('\\s*,\\s*', ', ', text)
+    return text.strip()"
+https://github.com/jbdamask/scratch/,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/worklog_proscessor.py,worklog_proscessor.py,process_worklog_csv,"def process_worklog_csv(file_content: str) -> List[Dict[str, Any]]:",1,25,"['StringIO(file_content)', 'csv.reader(csvfile)', 'next(reader)', ""ValueError(f'Error processing CSV: {e}')"", 'len(row)', 'row[0].strip().strip(\'""\')', 'row[1].strip().strip(\'""\')', 'row[2].strip()', 'clean_activities(row[5]).strip(\'""\')', ""results.append({'name': name, 'date': date, 'hours': hours, 'activities': activities})"", 'row[0].strip()', 'row[1].strip()', 'clean_activities(row[5])']","['results', 'csvfile', 'reader', 'name', 'date', 'hours', 'activities']","def process_worklog_csv(file_content: str) -> List[Dict[str, Any]]:
+    """"""
+    Process worklog CSV content and return cleaned data.
+    
+    Args:
+        file_content: String content of the CSV file
+        
+    Returns:
+        List of dictionaries with keys: name, date, hours, activities
+    """"""
+    results = []
+    try:
+        csvfile = StringIO(file_content)
+        reader = csv.reader(csvfile)
+        next(reader)
+        for row in reader:
+            if len(row) >= 6:
+                name = row[0].strip().strip('""')
+                date = row[1].strip().strip('""')
+                hours = row[2].strip()
+                activities = clean_activities(row[5]).strip('""')
+                results.append({'name': name, 'date': date, 'hours': hours, 'activities': activities})
+    except Exception as e:
+        raise ValueError(f'Error processing CSV: {e}')
+    return results"
+https://github.com/jbdamask/scratch/,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/worklog_proscessor.py,worklog_proscessor.py,process_worklog_csv_to_csv_string,def process_worklog_csv_to_csv_string(file_content: str) -> str:,1,17,"['process_worklog_csv(file_content)', 'StringIO()', 'csv.writer(output, quoting=csv.QUOTE_MINIMAL)', ""writer.writerow(['Name', 'Date', 'Billable Hours', 'Activities'])"", 'output.getvalue()', ""writer.writerow([row['name'], row['date'], row['hours'], row['activities']])""]","['results', 'output', 'writer']","def process_worklog_csv_to_csv_string(file_content: str) -> str:
+    """"""
+    Process worklog CSV content and return as cleaned CSV string.
+    
+    Args:
+        file_content: String content of the CSV file
+        
+    Returns:
+        Cleaned CSV string with header
+    """"""
+    results = process_worklog_csv(file_content)
+    output = StringIO()
+    writer = csv.writer(output, quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(['Name', 'Date', 'Billable Hours', 'Activities'])
+    for row in results:
+        writer.writerow([row['name'], row['date'], row['hours'], row['activities']])
+    return output.getvalue()"
+https://github.com/jbdamask/scratch/,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/worklog_proscessor.py,worklog_proscessor.py,process_worklog_file,"def process_worklog_file(input_file_path: str) -> List[Dict[str, Any]]:",1,16,"[""open(input_file_path, 'r', encoding='utf-8')"", 'csvfile.read()', 'process_worklog_csv(content)', ""ValueError(f'Error reading file {input_file_path}: {e}')""]",['content'],"def process_worklog_file(input_file_path: str) -> List[Dict[str, Any]]:
+    """"""
+    Process worklog CSV file and return cleaned data.
+    
+    Args:
+        input_file_path: Path to the CSV file
+        
+    Returns:
+        List of dictionaries with keys: name, date, hours, activities
+    """"""
+    try:
+        with open(input_file_path, 'r', encoding='utf-8') as csvfile:
+            content = csvfile.read()
+            return process_worklog_csv(content)
+    except Exception as e:
+        raise ValueError(f'Error reading file {input_file_path}: {e}')"
+https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/main.py,main.py,root,async def root():,0,4,"[""app.get('/')"", ""logger.info('Root endpoint accessed')""]",[],"@app.get('/')
+async def root():
+    logger.info('Root endpoint accessed')
+    return {'message': 'Claude Code Chat History Viewer API'}"
+https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/main.py,main.py,list_projects,async def list_projects():,0,18,"[""app.get('/projects')"", ""logger.info('Listing projects from path: %s', CLAUDE_PROJECTS_PATH)"", 'CLAUDE_PROJECTS_PATH.iterdir()', ""projects.sort(key=lambda x: x['created'], reverse=True)"", ""logger.info('Found %d projects', len(projects))"", 'CLAUDE_PROJECTS_PATH.exists()', ""logger.warning('Claude projects path does not exist: %s', CLAUDE_PROJECTS_PATH)"", 'item.is_dir()', 'len(projects)', ""logger.error('Error listing projects: %s', str(e))"", 'HTTPException(status_code=500, detail=str(e))', ""projects.append({'name': item.name, 'path': str(item), 'created': item.stat().st_ctime})"", 'str(e)', 'str(e)', 'str(item)', 'item.stat()']",['projects'],"@app.get('/projects')
+async def list_projects():
+    """"""List all Claude Code project directories""""""
+    logger.info('Listing projects from path: %s', CLAUDE_PROJECTS_PATH)
+    try:
+        if not CLAUDE_PROJECTS_PATH.exists():
+            logger.warning('Claude projects path does not exist: %s', CLAUDE_PROJECTS_PATH)
+            return {'projects': []}
+        projects = []
+        for item in CLAUDE_PROJECTS_PATH.iterdir():
+            if item.is_dir():
+                projects.append({'name': item.name, 'path': str(item), 'created': item.stat().st_ctime})
+        projects.sort(key=lambda x: x['created'], reverse=True)
+        logger.info('Found %d projects', len(projects))
+        return {'projects': projects}
+    except Exception as e:
+        logger.error('Error listing projects: %s', str(e))
+        raise HTTPException(status_code=500, detail=str(e))"
+https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/main.py,main.py,list_project_files,async def list_project_files(project_name: str):,1,19,"[""app.get('/projects/{project_name}/files')"", ""logger.info('Listing files for project: %s', project_name)"", 'project_path.iterdir()', ""files.sort(key=lambda x: x['modified'], reverse=True)"", ""logger.info('Found %d JSONL files in project %s', len(files), project_name)"", 'project_path.exists()', ""logger.error('Project not found: %s', project_name)"", ""HTTPException(status_code=404, detail='Project not found')"", 'len(files)', ""logger.error('Error listing files for project %s: %s', project_name, str(e))"", 'HTTPException(status_code=500, detail=str(e))', 'item.is_file()', ""files.append({'name': item.name, 'path': str(item), 'size': item.stat().st_size, 'modified': item.stat().st_mtime})"", 'str(e)', 'str(e)', 'str(item)', 'item.stat()', 'item.stat()']","['project_path', 'files']","@app.get('/projects/{project_name}/files')
+async def list_project_files(project_name: str):
+    """"""List JSONL files in a specific project directory""""""
+    logger.info('Listing files for project: %s', project_name)
+    try:
+        project_path = CLAUDE_PROJECTS_PATH / project_name
+        if not project_path.exists():
+            logger.error('Project not found: %s', project_name)
+            raise HTTPException(status_code=404, detail='Project not found')
+        files = []
+        for item in project_path.iterdir():
+            if item.is_file() and item.suffix == '.jsonl':
+                files.append({'name': item.name, 'path': str(item), 'size': item.stat().st_size, 'modified': item.stat().st_mtime})
+        files.sort(key=lambda x: x['modified'], reverse=True)
+        logger.info('Found %d JSONL files in project %s', len(files), project_name)
+        return {'files': files}
+    except Exception as e:
+        logger.error('Error listing files for project %s: %s', project_name, str(e))
+        raise HTTPException(status_code=500, detail=str(e))"
+https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/main.py,main.py,read_chat_file,"async def read_chat_file(project_name: str, file_name: str):",2,29,"[""app.get('/projects/{project_name}/files/{file_name}')"", ""logger.info('Reading chat file: %s from project: %s', file_name, project_name)"", ""logger.info('Successfully parsed %d messages from file %s', len(messages), file_name)"", 'file_path.exists()', ""logger.error('File not found: %s in project %s', file_name, project_name)"", ""HTTPException(status_code=404, detail='File not found')"", ""open(file_path, 'r', encoding='utf-8')"", 'enumerate(f, 1)', ""logger.warning('Encountered %d JSON decode errors in file %s', json_decode_errors, file_name)"", 'len(messages)', 'len(messages)', ""logger.error('Error reading chat file %s from project %s: %s', file_name, project_name, str(e))"", 'HTTPException(status_code=500, detail=str(e))', 'line.strip()', 'str(e)', 'file_path.stat()', 'file_path.stat()', 'str(e)', 'json.loads(line)', 'messages.append(message_data)', ""logger.warning('JSON decode error on line %d in file %s: %s', line_num, file_name, str(e))"", 'str(e)']","['file_path', 'messages', 'json_decode_errors', 'line', 'message_data']","@app.get('/projects/{project_name}/files/{file_name}')
+async def read_chat_file(project_name: str, file_name: str):
+    """"""Read and parse a JSONL chat file""""""
+    logger.info('Reading chat file: %s from project: %s', file_name, project_name)
+    try:
+        file_path = CLAUDE_PROJECTS_PATH / project_name / file_name
+        if not file_path.exists():
+            logger.error('File not found: %s in project %s', file_name, project_name)
+            raise HTTPException(status_code=404, detail='File not found')
+        messages = []
+        json_decode_errors = 0
+        with open(file_path, 'r', encoding='utf-8') as f:
+            for line_num, line in enumerate(f, 1):
+                line = line.strip()
+                if line:
+                    try:
+                        message_data = json.loads(line)
+                        messages.append(message_data)
+                    except json.JSONDecodeError as e:
+                        json_decode_errors += 1
+                        logger.warning('JSON decode error on line %d in file %s: %s', line_num, file_name, str(e))
+                        continue
+        if json_decode_errors > 0:
+            logger.warning('Encountered %d JSON decode errors in file %s', json_decode_errors, file_name)
+        logger.info('Successfully parsed %d messages from file %s', len(messages), file_name)
+        return {'messages': messages, 'count': len(messages), 'file_info': {'name': file_name, 'size': file_path.stat().st_size, 'modified': file_path.stat().st_mtime}}
+    except Exception as e:
+        logger.error('Error reading chat file %s from project %s: %s', file_name, project_name, str(e))
+        raise HTTPException(status_code=500, detail=str(e))"
+https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,../fn_test_files/main.py,main.py,find_available_port,"def find_available_port(start_port: int = 8000, max_attempts: int = 10) -> int:",2,10,"['range(start_port, start_port + max_attempts)', ""RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"", 'socket.socket(socket.AF_INET, socket.SOCK_STREAM)', ""s.bind(('', port))""]",[],"def find_available_port(start_port: int=8000, max_attempts: int=10) -> int:
+    """"""Find an available port starting from start_port""""""
+    for port in range(start_port, start_port + max_attempts):
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.bind(('', port))
+                return port
+        except OSError:
+            continue
+    raise RuntimeError(f'Could not find an available port in range {start_port}-{start_port + max_attempts}')"
