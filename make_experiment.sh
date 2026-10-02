@@ -13,4 +13,4 @@ for i in "${!SUB_NAMES[@]}"; do
     #${HISTORY[i]}
 done
 
-# bash make_dataset.sh
+bash make_dataset.sh
