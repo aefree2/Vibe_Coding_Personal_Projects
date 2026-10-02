@@ -1,0 +1,312 @@
+,url,commit,proj_name,file_path,file_name,new_url,comments,type,raw_comment
+365272,https://github.com/hshadab/kinic-api,f150bf959cdc94696424ecccd09ebe94d3975b23,kinic-api,kinic-api/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langbulgarianmodel.py,langbulgarianmodel.py,https://github.com/hshadab/kinic-api/blob/f150bf959cdc94696424ecccd09ebe94d3975b23/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langbulgarianmodel.py#L1239,"        42: 1,  # 'ю'
+        16: 1,  # 'я'
+        58: 0,  # 'є'
+        62: 0,  # '№'
+    },",comment,# 'є'
+66314,https://github.com/NeptuneHub/AudioMuse-AI,4a1634bbefdca066455dedfb54f5f389feb869f8,AudioMuse-AI,AudioMuse-AI/tests/unit/test_mediaserver.py,test_mediaserver.py,https://github.com/NeptuneHub/AudioMuse-AI/blob/4a1634bbefdca066455dedfb54f5f389feb869f8/tests/unit/test_mediaserver.py#L357,"    @patch('tasks.mediaserver_jellyfin.config')
+    def test_returns_false_on_http_error(self, mock_config, mock_delete):
+        """"""HTTP error returns False - catches if error handling changes""""""
+        from tasks.mediaserver_jellyfin import delete_playlist
+        ",docstring,"""""""HTTP error returns False - catches if error handling changes"""""""
+378312,https://github.com/hshadab/kinic-api,f150bf959cdc94696424ecccd09ebe94d3975b23,kinic-api,kinic-api/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langrussianmodel.py,langrussianmodel.py,https://github.com/hshadab/kinic-api/blob/f150bf959cdc94696424ecccd09ebe94d3975b23/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langrussianmodel.py#L5087,"    166: 228,  # '╕'
+    167: 229,  # '╖'
+    168: 230,  # '╗'
+    169: 231,  # '╘'
+    170: 232,  # '╙'",comment,# '╗'
+35484,https://github.com/caronc/apprise,6fb8fbab1974fe424025a3f1b99532d5339e3ce0,apprise,apprise/test/test_plugin_ses.py,test_plugin_ses.py,https://github.com/caronc/apprise/blob/6fb8fbab1974fe424025a3f1b99532d5339e3ce0/test/test_plugin_ses.py#L379,"    """"""
+
+    # Prepare Mock return object
+    response = mock.Mock()
+    response.content = AWS_SES_GOOD_RESPONSE",comment,# Prepare Mock return object
+202238,https://github.com/majoraexp/Taskwire,8b6691e804eeefcc5845f799a507f1c36c6d06c9,Taskwire,Taskwire/Windows_port_Nuitka/Taskwire/src/ui.py,ui.py,https://github.com/majoraexp/Taskwire/blob/8b6691e804eeefcc5845f799a507f1c36c6d06c9/Windows_port_Nuitka/Taskwire/src/ui.py#L42,"
+class GameTooltip(QWidget):
+    """"""
+    A custom tooltip widget designed to mimic a game HUD style.
+    It displays text with a semi-transparent background and neon border.
+    """"""
+    def __init__(self, parent=None):
+        super().__init__(parent)",docstring,"""""""
+    A custom tooltip widget designed to mimic a game HUD style.
+    It displays text with a semi-transparent background and neon border.
+    """""""
+23767,https://github.com/joshi008/gsoc-tagger,625a2629d9008aa9a72533f23c26ee331802274a,gsoc-tagger,gsoc-tagger/env/Lib/site-packages/setuptools/_distutils/dist.py,dist.py,https://github.com/joshi008/gsoc-tagger/blob/625a2629d9008aa9a72533f23c26ee331802274a/env/Lib/site-packages/setuptools/_distutils/dist.py#L1147,"        self._write_list(file, 'Classifier', self.get_classifiers())
+
+        # PEP 314
+        self._write_list(file, 'Requires', self.get_requires())
+        self._write_list(file, 'Provides', self.get_provides())",comment,# PEP 314
+63783,https://github.com/NeptuneHub/AudioMuse-AI,4a1634bbefdca066455dedfb54f5f389feb869f8,AudioMuse-AI,AudioMuse-AI/tasks/clustering_gpu.py,clustering_gpu.py,https://github.com/NeptuneHub/AudioMuse-AI/blob/4a1634bbefdca066455dedfb54f5f389feb869f8/tasks/clustering_gpu.py#L132,"                # Fall through to CPU implementation
+
+        # CPU fallback
+        from sklearn.cluster import KMeans
+        self.model = KMeans(",comment,# CPU fallback
+276511,https://github.com/kimeisele/steward-protocol,0b42dd77b871dbab4687805569539ec8fd13257f,steward-protocol,steward-protocol/vibe_core/naga/wrappers.py,wrappers.py,https://github.com/kimeisele/steward-protocol/blob/0b42dd77b871dbab4687805569539ec8fd13257f/vibe_core/naga/wrappers.py#L71,"    def read(self, key: str, context: Optional[SovereignContext] = None) -> ReadResult:
+        # DAYA: Sanitize Input Key
+        clean_key = self._daya.enforce_purity(key, context)  # type: ignore
+
+        # EXECUTE - Inner is treated as ReadWriteProtocol structure",comment,# type: ignore
+74585,https://github.com/Priivacy-ai/spec-kitty,5b632a9abea5d84c6ff92c297fae190f9198ea75,spec-kitty,spec-kitty/tests/unit/runtime/test_merge.py,test_merge.py,https://github.com/Priivacy-ai/spec-kitty/blob/5b632a9abea5d84c6ff92c297fae190f9198ea75/tests/unit/runtime/test_merge.py#L53,"        (source / ""missions"" / ""software-dev"" / ""mission.yaml"").write_text(""new"")
+
+        # Dest has user-owned missions/custom/
+        (dest / ""missions"" / ""custom"").mkdir(parents=True)
+        (dest / ""missions"" / ""custom"" / ""my-mission.yaml"").write_text(""user data"")",comment,# Dest has user-owned missions/custom/
+148555,https://github.com/bookcard-io/bookcard,c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498,bookcard,bookcard/tests/repositories/test_epub_fixer_repository.py,test_epub_fixer_repository.py,https://github.com/bookcard-io/bookcard/blob/c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498/tests/repositories/test_epub_fixer_repository.py#L446,"        self, fix_repo: EPUBFixRepository, session: MockSession
+    ) -> None:
+        """"""Test get_by_run returns empty list when no fixes.""""""
+        session.set_exec_result([])
+        result = fix_repo.get_by_run(run_id=999)",docstring,"""""""Test get_by_run returns empty list when no fixes."""""""
+243345,https://github.com/kimeisele/steward-protocol,0b42dd77b871dbab4687805569539ec8fd13257f,steward-protocol,steward-protocol/tests/mahamantra/substrate/test_wiring.py,test_wiring.py,https://github.com/kimeisele/steward-protocol/blob/0b42dd77b871dbab4687805569539ec8fd13257f/tests/mahamantra/substrate/test_wiring.py#L364,"    def test_calculate_fractal_depth_2(self):
+        """"""17-256 nodes is depth 2-3.""""""
+        # 17 nodes requires depth 2 (16^1 = 16 isn't enough, need 16^2 = 256)
+        assert calculate_fractal_depth(17) == 2
+        # 256 nodes is exactly 16^2, but implementation returns depth+1",comment,"# 17 nodes requires depth 2 (16^1 = 16 isn't enough, need 16^2 = 256)"
+110528,https://github.com/chunkhound/chunkhound,e47bc312cf8a2c0d7d90f942871901d16016557b,chunkhound,chunkhound/chunkhound/providers/database/duckdb/file_repository.py,file_repository.py,https://github.com/chunkhound/chunkhound/blob/e47bc312cf8a2c0d7d90f942871901d16016557b/chunkhound/providers/database/duckdb/file_repository.py#L170,"                # Fallback for tests
+                result = self.connection_manager.connection.execute(
+                    """"""
+                    SELECT id, path, name, extension, size, modified_time, language, created_at, updated_at
+                    FROM files WHERE id = ?
+                """""",
+                    [file_id],
+                ).fetchone()",docstring,"""""""
+                    SELECT id, path, name, extension, size, modified_time, language, created_at, updated_at
+                    FROM files WHERE id = ?
+                """""""
+130311,https://github.com/brainless/brainless.in,095bf1267d8553e5a6074327b7a002508d765e5d,brainless.in,brainless.in/scripts/import_projects.py,import_projects.py,https://github.com/brainless/brainless.in/blob/095bf1267d8553e5a6074327b7a002508d765e5d/scripts/import_projects.py#L1,"""""""
+This script imports project information from GitHub and saves it to a JSON file.
+
+It fetches repositories from a configurable list of owners, filters for projects
+with recent activity, and extracts relevant details like name, description,
+languages, and a summary from the README.
+
+The script requires a GitHub Personal Access Token with 'repo' scope.
+Set the GITHUB_TOKEN environment variable in a .env file in the same directory.
+
+To run the script:
+  pip install -r requirements.txt
+  python import_projects.py
+""""""
+
+import os",docstring,"""""""
+This script imports project information from GitHub and saves it to a JSON file.
+
+It fetches repositories from a configurable list of owners, filters for projects
+with recent activity, and extracts relevant details like name, description,
+languages, and a summary from the README.
+
+The script requires a GitHub Personal Access Token with 'repo' scope.
+Set the GITHUB_TOKEN environment variable in a .env file in the same directory.
+
+To run the script:
+  pip install -r requirements.txt
+  python import_projects.py
+"""""""
+106730,https://github.com/chunkhound/chunkhound,e47bc312cf8a2c0d7d90f942871901d16016557b,chunkhound,chunkhound/chunkhound/parsers/mappings/tsx.py,tsx.py,https://github.com/chunkhound/chunkhound/blob/e47bc312cf8a2c0d7d90f942871901d16016557b/chunkhound/parsers/mappings/tsx.py#L161,"
+    def get_props_interface_query(self) -> str:
+        """"""Get tree-sitter query for component props interfaces.
+
+        Returns:
+            Tree-sitter query string for finding props interface definitions
+        """"""
+        return """"""
+        (interface_declaration",docstring,"""""""Get tree-sitter query for component props interfaces.
+
+        Returns:
+            Tree-sitter query string for finding props interface definitions
+        """""""
+414626,https://github.com/rm2thaddeus/Pixel_Detective,8e741807f9b04e4bbb5c1b5c6460cd271e600837,Pixel_Detective,Pixel_Detective/archive/sprint_06_service_superseded_managers/model_manager.py,model_manager.py,https://github.com/rm2thaddeus/Pixel_Detective/blob/8e741807f9b04e4bbb5c1b5c6460cd271e600837/archive/sprint_06_service_superseded_managers/model_manager.py#L239,"            return cached
+        
+        embedding = process_image(self.clip_model, self.clip_preprocess, image_path) # Assuming process_image takes model&preprocess
+        cache.set(file_hash, embedding)
+        return embedding",comment,# Assuming process_image takes model&preprocess
+84849,https://github.com/Priivacy-ai/spec-kitty,5b632a9abea5d84c6ff92c297fae190f9198ea75,spec-kitty,spec-kitty/src/specify_cli/glossary/store.py,store.py,https://github.com/Priivacy-ai/spec-kitty/blob/5b632a9abea5d84c6ff92c297fae190f9198ea75/src/specify_cli/glossary/store.py#L1,"""""""In-memory glossary store backed by event log.""""""
+
+from __future__ import annotations",docstring,"""""""In-memory glossary store backed by event log."""""""
+401348,https://github.com/Howtoimagine/E8-Kaleidescope-AI,d7341ae2fddd76c529909873aaada7438f57e583,E8-Kaleidescope-AI,E8-Kaleidescope-AI/e8_mind_server_M24.py,e8_mind_server_M24.py,https://github.com/Howtoimagine/E8-Kaleidescope-AI/blob/d7341ae2fddd76c529909873aaada7438f57e583/e8_mind_server_M24.py#L18474,"                            scheduled_explorer = True
+                            dream_forced = True
+                            # reset the streak after forcing
+                            self._dream_skip_streak = 0
+                            try:",comment,# reset the streak after forcing
+31115,https://github.com/cermatej/plsql-analysis,e6b16d623d881b33416e822a86b83ab475442464,plsql-analysis,plsql-analysis/src/rest/parser_api/parser/antlr_plsql/antlr_py/plsqlParser.py,plsqlParser.py,https://github.com/cermatej/plsql-analysis/blob/e6b16d623d881b33416e822a86b83ab475442464/src/rest/parser_api/parser/antlr_plsql/antlr_py/plsqlParser.py#L61244,"            self.parser = parser
+            self._argument = None # ArgumentContext
+            self.argument_list = list() # of ArgumentContexts
+
+        def LEFT_PAREN(self):",comment,# of ArgumentContexts
+388588,https://github.com/hshadab/kinic-api,f150bf959cdc94696424ecccd09ebe94d3975b23,kinic-api,kinic-api/venv/lib/python3.12/site-packages/pip/_vendor/pygments/util.py,util.py,https://github.com/hshadab/kinic-api/blob/f150bf959cdc94696424ecccd09ebe94d3975b23/venv/lib/python3.12/site-packages/pip/_vendor/pygments/util.py#L301,"
+def guess_decode_from_terminal(text, term):
+    """"""Decode *text* coming from terminal *term*.
+
+    First try the terminal encoding, if given.
+    Then try UTF-8.  Then try the preferred locale encoding.
+    Fall back to latin-1, which always works.
+    """"""
+    if getattr(term, 'encoding', None):
+        try:",docstring,"""""""Decode *text* coming from terminal *term*.
+
+    First try the terminal encoding, if given.
+    Then try UTF-8.  Then try the preferred locale encoding.
+    Fall back to latin-1, which always works.
+    """""""
+150916,https://github.com/bookcard-io/bookcard,c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498,bookcard,bookcard/tests/api/routes/test_authors.py,test_authors.py,https://github.com/bookcard-io/bookcard/blob/c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498/tests/api/routes/test_authors.py#L49,"
+class MockAuthorService:
+    """"""Mock AuthorService for testing.""""""
+
+    def __init__(self) -> None:",docstring,"""""""Mock AuthorService for testing."""""""
+160192,https://github.com/bookcard-io/bookcard,c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498,bookcard,bookcard/tests/services/ingest/test_ingest_processor_service.py,test_ingest_processor_service.py,https://github.com/bookcard-io/bookcard/blob/c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498/tests/services/ingest/test_ingest_processor_service.py#L166,"@pytest.fixture
+def file_group_empty(temp_dir: Path) -> FileGroup:
+    """"""Create a FileGroup with no files.""""""
+    return FileGroup(
+        book_key=""empty_book"",",docstring,"""""""Create a FileGroup with no files."""""""
+25153,https://github.com/joshi008/gsoc-tagger,625a2629d9008aa9a72533f23c26ee331802274a,gsoc-tagger,gsoc-tagger/env/Lib/site-packages/itsdangerous/_compat.py,_compat.py,https://github.com/joshi008/gsoc-tagger/blob/625a2629d9008aa9a72533f23c26ee331802274a/env/Lib/site-packages/itsdangerous/_compat.py#L42,"
+
+# Starting with 2.7/3.3 the standard library has a c-implementation for
+# constant time string compares.
+constant_time_compare = getattr(hmac, ""compare_digest"", _constant_time_compare)",comment,"# Starting with 2.7/3.3 the standard library has a c-implementation for
+# constant time string compares."
+31911,https://github.com/cermatej/plsql-analysis,e6b16d623d881b33416e822a86b83ab475442464,plsql-analysis,plsql-analysis/src/rest/parser_api/parser/antlr_plsql/antlr_py/plsqlListener.py,plsqlListener.py,https://github.com/cermatej/plsql-analysis/blob/e6b16d623d881b33416e822a86b83ab475442464/src/rest/parser_api/parser/antlr_plsql/antlr_py/plsqlListener.py#L936,"
+
+    # Enter a parse tree produced by plsqlParser#xmlschema_spec.
+    def enterXmlschema_spec(self, ctx:plsqlParser.Xmlschema_specContext):
+        pass",comment,# Enter a parse tree produced by plsqlParser#xmlschema_spec.
+305464,https://github.com/kimeisele/steward-protocol,0b42dd77b871dbab4687805569539ec8fd13257f,steward-protocol,steward-protocol/vibe_core/protocols/mahajanas/bali/yield_cpu.py,yield_cpu.py,https://github.com/kimeisele/steward-protocol/blob/0b42dd77b871dbab4687805569539ec8fd13257f/vibe_core/protocols/mahajanas/bali/yield_cpu.py#L322,"    def force_yield(self) -> YieldResult:
+        """"""Force an immediate yield regardless of policy.""""""
+        time.sleep(0)  # Minimal yield
+        self._record_yield(0)
+",comment,# Minimal yield
+51669,https://github.com/moon004/YouDeez,70a72f52064615d2d4aa51e37376f3d4ff47b718,YouDeez,YouDeez/vendor/youtube-dl-getsize/youtube_dl/swfinterp.py,swfinterp.py,https://github.com/moon004/YouDeez/blob/70a72f52064615d2d4aa51e37376f3d4ff47b718/vendor/youtube-dl-getsize/youtube_dl/swfinterp.py#L606,"                    res = stack.pop()
+                    return res
+                elif opcode == 73:  # constructsuper
+                    # Not yet implemented, just hope it works without it
+                    arg_count = u30()",comment,# constructsuper
+232398,https://github.com/kimeisele/steward-protocol,0b42dd77b871dbab4687805569539ec8fd13257f,steward-protocol,steward-protocol/tests/mahajanas/12_yamaraja/test_security_protocol.py,test_security_protocol.py,https://github.com/kimeisele/steward-protocol/blob/0b42dd77b871dbab4687805569539ec8fd13257f/tests/mahajanas/12_yamaraja/test_security_protocol.py#L309,"
+    def test_null_security_judge_mercy(self):
+        """"""NullSecurityProtocol always judges MERCY.""""""
+        security = NullSecurityProtocol()
+        verdict = security.judge(object())",docstring,"""""""NullSecurityProtocol always judges MERCY."""""""
+334283,https://github.com/bdavidriggins/VoxInput,7514f958e6a30786e52b7fec2e27ade627a036f3,VoxInput,VoxInput/src/audio_feedback.py,audio_feedback.py,https://github.com/bdavidriggins/VoxInput/blob/7514f958e6a30786e52b7fec2e27ade627a036f3/src/audio_feedback.py#L36,"        progress = i / _N_SAMPLES
+        freq = freq_start + (freq_end - freq_start) * progress
+        # Fade in/out envelope to avoid click
+        envelope = 1.0
+        fade_len = _N_SAMPLES // 8",comment,# Fade in/out envelope to avoid click
+152338,https://github.com/bookcard-io/bookcard,c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498,bookcard,bookcard/tests/metadata/providers/test_lubimyczytac.py,test_lubimyczytac.py,https://github.com/bookcard-io/bookcard/blob/c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498/tests/metadata/providers/test_lubimyczytac.py#L1092,"    lubimyczytac_provider: LubimyCzytacProvider,
+) -> None:
+    """"""Test _fetch_book_details exception handling (covers lines 452-461).""""""
+    import concurrent.futures
+",docstring,"""""""Test _fetch_book_details exception handling (covers lines 452-461)."""""""
+57779,https://github.com/jbdamask/scratch,8e927149a250e44f09756f7fdf6d7db04b2a2623,scratch,scratch/TOOLS/invoice-creator/backend/main.py,main.py,https://github.com/jbdamask/scratch/blob/8e927149a250e44f09756f7fdf6d7db04b2a2623/TOOLS/invoice-creator/backend/main.py#L398,"    
+    for item in items:
+        # Use Paragraph for description to enable word wrapping
+        desc_paragraph = Paragraph(item['description'], styles['Normal'])
+        data.append([",comment,# Use Paragraph for description to enable word wrapping
+143983,https://github.com/saharmor/simulatedev,faa3a442f76167e8d715178b95d35f67afe75cd5,simulatedev,simulatedev/utils/computer_use_utils.py,computer_use_utils.py,https://github.com/saharmor/simulatedev/blob/faa3a442f76167e8d715178b95d35f67afe75cd5/utils/computer_use_utils.py#L41,"@dataclass
+class ScreenshotMetadata:
+    """"""Metadata about how a screenshot was captured""""""
+    screenshot_type: ScreenshotType
+    window_x: int = 0  # Window position on screen (for window screenshots)",docstring,"""""""Metadata about how a screenshot was captured"""""""
+382959,https://github.com/hshadab/kinic-api,f150bf959cdc94696424ecccd09ebe94d3975b23,kinic-api,kinic-api/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langgreekmodel.py,langgreekmodel.py,https://github.com/hshadab/kinic-api/blob/f150bf959cdc94696424ecccd09ebe94d3975b23/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langgreekmodel.py#L4081,"    219: 121,  # 'Ϋ'
+    220: 17,  # 'ά'
+    221: 18,  # 'έ'
+    222: 22,  # 'ή'
+    223: 15,  # 'ί'",comment,# 'έ'
+210973,https://github.com/yusufkaraaslan/Skill_Seekers,0ca271cdcb5cc3f99da501c457eb4d9813b9cfc0,Skill_Seekers,Skill_Seekers/tests/test_cloud_storage.py,test_cloud_storage.py,https://github.com/yusufkaraaslan/Skill_Seekers/blob/0ca271cdcb5cc3f99da501c457eb4d9813b9cfc0/tests/test_cloud_storage.py#L47,"
+def test_get_storage_adaptor_s3():
+    """"""Test S3 adaptor factory.""""""
+    if not BOTO3_AVAILABLE:
+        pytest.skip(""boto3 not installed"")",docstring,"""""""Test S3 adaptor factory."""""""
+242488,https://github.com/kimeisele/steward-protocol,0b42dd77b871dbab4687805569539ec8fd13257f,steward-protocol,steward-protocol/tests/mahamantra/venu/test_clock.py,test_clock.py,https://github.com/kimeisele/steward-protocol/blob/0b42dd77b871dbab4687805569539ec8fd13257f/tests/mahamantra/venu/test_clock.py#L249,"
+class TestMantraClockOnMala:
+    """"""Test on_mala callbacks.""""""
+
+    def test_on_mala_registers_callback(self):",docstring,"""""""Test on_mala callbacks."""""""
+385335,https://github.com/hshadab/kinic-api,f150bf959cdc94696424ecccd09ebe94d3975b23,kinic-api,kinic-api/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langturkishmodel.py,langturkishmodel.py,https://github.com/hshadab/kinic-api/blob/f150bf959cdc94696424ecccd09ebe94d3975b23/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langturkishmodel.py#L1670,"        5: 3,  # 'l'
+        13: 3,  # 'm'
+        4: 3,  # 'n'
+        15: 0,  # 'o'
+        26: 3,  # 'p'",comment,# 'n'
+160208,https://github.com/bookcard-io/bookcard,c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498,bookcard,bookcard/tests/services/ingest/test_ingest_processor_service.py,test_ingest_processor_service.py,https://github.com/bookcard-io/bookcard/blob/c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498/tests/services/ingest/test_ingest_processor_service.py#L320,"        file_group: FileGroup,
+    ) -> None:
+        """"""Test file group processing with creation error.""""""
+        history = IngestHistory(
+            id=None,  # Simulate creation failure",docstring,"""""""Test file group processing with creation error."""""""
+155239,https://github.com/bookcard-io/bookcard,c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498,bookcard,bookcard/tests/services/test_metadata_builder.py,test_metadata_builder.py,https://github.com/bookcard-io/bookcard/blob/c8b8ecb2e3490f6f4e2ad46ab1295f5ab8786498/tests/services/test_metadata_builder.py#L169,"
+def test_build_without_uuid(book: Book) -> None:
+    """"""Test build generates UUID when book has no UUID.""""""
+    book.uuid = None
+    book_with_rels = BookWithFullRelations(",docstring,"""""""Test build generates UUID when book has no UUID."""""""
+196752,https://github.com/Detrol/quorum-cli,6366ca7cf31500babcff934b60fde4569c00722d,quorum-cli,quorum-cli/src/quorum/team.py,team.py,https://github.com/Detrol/quorum-cli/blob/6366ca7cf31500babcff934b60fde4569c00722d/src/quorum/team.py#L162,"        self._original_task: str = """"
+
+        # Storage for results (populated by method orchestrators)
+        self._synthesis_result: SynthesisResult | None = None
+        self._initial_responses: dict[str, str] = {}",comment,# Storage for results (populated by method orchestrators)
+188909,https://github.com/OptikR/OptikR,f329714f5d7b2d92bf392f2207843bcc35a6ee9c,OptikR,OptikR/app/utils/error_handler.py,error_handler.py,https://github.com/OptikR/OptikR/blob/f329714f5d7b2d92bf392f2207843bcc35a6ee9c/app/utils/error_handler.py#L293,"    
+    def _fallback_to_screenshot(self, error: Exception, context: ErrorContext) -> bool:
+        """"""Fallback to screenshot-based capture.""""""
+        self.logger.info(""Falling back to screenshot capture"")
+        # Implementation would switch capture mode",docstring,"""""""Fallback to screenshot-based capture."""""""
+392700,https://github.com/hshadab/kinic-api,f150bf959cdc94696424ecccd09ebe94d3975b23,kinic-api,kinic-api/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/poolmanager.py,poolmanager.py,https://github.com/hshadab/kinic-api/blob/f150bf959cdc94696424ecccd09ebe94d3975b23/venv/lib/python3.12/site-packages/pip/_vendor/urllib3/poolmanager.py#L523,"
+    def _set_proxy_headers(self, url, headers=None):
+        """"""
+        Sets headers needed by proxies: specifically, the Accept and Host
+        headers. Only sets headers not provided by the user.
+        """"""
+        headers_ = {""Accept"": ""*/*""}
+",docstring,"""""""
+        Sets headers needed by proxies: specifically, the Accept and Host
+        headers. Only sets headers not provided by the user.
+        """""""
+322735,https://github.com/rileylemm/chatmind,810b5a57b5ab4be7263974c77b7d62463b496af1,chatmind,chatmind/chatmind/pipeline/cluster_summarization/cloud_api/enhanced_cluster_summarizer.py,enhanced_cluster_summarizer.py,https://github.com/rileylemm/chatmind/blob/810b5a57b5ab4be7263974c77b7d62463b496af1/chatmind/pipeline/cluster_summarization/cloud_api/enhanced_cluster_summarizer.py#L181,"            cluster_id = embedding.get('cluster_id', -1)
+            
+            # Skip noise clusters (cluster_id = -1)
+            if cluster_id == -1:
+                continue",comment,# Skip noise clusters (cluster_id = -1)
+90004,https://github.com/brandburner/fabula,6bc794bccba5708efc83caffff2b8ff5d19710cb,fabula,fabula/utils/storybible/baml_client/async_client.py,async_client.py,https://github.com/brandburner/fabula/blob/6bc794bccba5708efc83caffff2b8ff5d19710cb/utils/storybible/baml_client/async_client.py#L137,"      __tb__ = options.get(""tb"", None)
+      if __tb__ is not None:
+        tb = __tb__._tb # type: ignore (we know how to use this private attribute)
+      else:
+        tb = None",comment,# type: ignore (we know how to use this private attribute)
+245050,https://github.com/kimeisele/steward-protocol,0b42dd77b871dbab4687805569539ec8fd13257f,steward-protocol,steward-protocol/tests/mahamantra/cli/test_observe.py,test_observe.py,https://github.com/kimeisele/steward-protocol/blob/0b42dd77b871dbab4687805569539ec8fd13257f/tests/mahamantra/cli/test_observe.py#L59,"
+    def test_protocol_status_creation(self):
+        """"""ProtocolStatus can be created.""""""
+        status: ProtocolStatus = {
+            ""name"": ""KalaProtocol"",",docstring,"""""""ProtocolStatus can be created."""""""
+300994,https://github.com/kimeisele/steward-protocol,0b42dd77b871dbab4687805569539ec8fd13257f,steward-protocol,steward-protocol/vibe_core/governance/invariants.py,invariants.py,https://github.com/kimeisele/steward-protocol/blob/0b42dd77b871dbab4687805569539ec8fd13257f/vibe_core/governance/invariants.py#L81,"        """"""
+        if not self.soul_path.exists():
+            # Fail-safe: Missing soul.yaml is allowed for development
+            # In production, this should probably raise an error
+            return []
+",comment,"# Fail-safe: Missing soul.yaml is allowed for development
+# In production, this should probably raise an error"
+371325,https://github.com/hshadab/kinic-api,f150bf959cdc94696424ecccd09ebe94d3975b23,kinic-api,kinic-api/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langhebrewmodel.py,langhebrewmodel.py,https://github.com/hshadab/kinic-api/blob/f150bf959cdc94696424ecccd09ebe94d3975b23/venv/lib/python3.12/site-packages/pip/_vendor/chardet/langhebrewmodel.py#L2413,"    },
+    14: {  # 'ח'
+        50: 0,  # 'a'
+        60: 0,  # 'c'
+        61: 0,  # 'd'",comment,# 'a'
+326128,https://github.com/CodeBoarding/CodeBoarding,cea82364bd868597075d79a613a05013ced31391,CodeBoarding,CodeBoarding/tests/agents/test_llm_config.py,test_llm_config.py,https://github.com/CodeBoarding/CodeBoarding/blob/cea82364bd868597075d79a613a05013ced31391/tests/agents/test_llm_config.py#L416,"                        agent.agent_monitoring_callback.model_name = ""gpt-4-turbo""
+
+                        # Verify the agent's monitoring callback has the correct model name
+                        results = agent.get_monitoring_results()
+                        assert results[""model_name""] == ""gpt-4-turbo""",comment,# Verify the agent's monitoring callback has the correct model name
+56065,https://github.com/jankrepl/deepdow,341b34d324cf8054f2f59f092b3afcdd031bc828,deepdow,deepdow/tests/test_losses.py,test_losses.py,https://github.com/jankrepl/deepdow/blob/341b34d324cf8054f2f59f092b3afcdd031bc828/tests/test_losses.py#L100,"        y_2_ = torch.tensor(
+            [[0.01, 0.01], [-0.05, -0.05]]
+        )  # assets move in the same way
+
+        w_a_ = torch.tensor([0.2, 0.8])",comment,# assets move in the same way
+309319,https://github.com/kimeisele/steward-protocol,0b42dd77b871dbab4687805569539ec8fd13257f,steward-protocol,steward-protocol/vibe_core/protocols/universal/cli.py,cli.py,https://github.com/kimeisele/steward-protocol/blob/0b42dd77b871dbab4687805569539ec8fd13257f/vibe_core/protocols/universal/cli.py#L483,"
+    success: bool
+    opcode: str  # MantraOpCode value
+    message: str
+    data: Optional[Dict[str, Union[str, int, float, bool, List[str]]]] = None",comment,# MantraOpCode value
+214005,https://github.com/yusufkaraaslan/Skill_Seekers,0ca271cdcb5cc3f99da501c457eb4d9813b9cfc0,Skill_Seekers,Skill_Seekers/tests/test_incremental_updates.py,test_incremental_updates.py,https://github.com/yusufkaraaslan/Skill_Seekers/blob/0ca271cdcb5cc3f99da501c457eb4d9813b9cfc0/tests/test_incremental_updates.py#L63,"    updater = IncrementalUpdater(temp_skill_dir)
+
+    # First scan
+    updater.detect_changes()
+    updater.save_current_versions()",comment,# First scan
+10714,https://github.com/joshi008/gsoc-tagger,625a2629d9008aa9a72533f23c26ee331802274a,gsoc-tagger,gsoc-tagger/env/Lib/site-packages/pip/_internal/network/lazy_wheel.py,lazy_wheel.py,https://github.com/joshi008/gsoc-tagger/blob/625a2629d9008aa9a72533f23c26ee331802274a/env/Lib/site-packages/pip/_internal/network/lazy_wheel.py#L178,"    def _check_zip(self):
+        # type: () -> None
+        """"""Check and download until the file is a valid ZIP.""""""
+        end = self._length - 1
+        for start in reversed(range(0, end, self._chunk_size)):",docstring,"""""""Check and download until the file is a valid ZIP."""""""
+73906,https://github.com/Priivacy-ai/spec-kitty,5b632a9abea5d84c6ff92c297fae190f9198ea75,spec-kitty,spec-kitty/tests/unit/test_gitignore_manager.py,test_gitignore_manager.py,https://github.com/Priivacy-ai/spec-kitty/blob/5b632a9abea5d84c6ff92c297fae190f9198ea75/tests/unit/test_gitignore_manager.py#L79,"
+    def test_protect_all_agents_with_empty_gitignore(self, manager, temp_dir):
+        """"""Test protect_all_agents adds to empty .gitignore.""""""
+        manager.gitignore_path.touch()
+",docstring,"""""""Test protect_all_agents adds to empty .gitignore."""""""
