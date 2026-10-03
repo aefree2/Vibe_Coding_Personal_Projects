@@ -12,7 +12,7 @@ Low-level metrics can be found in /dataset_features
 
 Due to the large size, most of the data files have been zipped. Please unzip prior to running. 
 
-If you would like to run the repository (not necessary):
+If you would like to run the repository:
 
 Please run
 
